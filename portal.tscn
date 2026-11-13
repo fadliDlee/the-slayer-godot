@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dkgspo2to7v5o"]
+
+[ext_resource type="Texture2D" uid="uid://cavnynvdp3c51" path="res://portal.png" id="1_0r486"]
+[ext_resource type="Script" uid="uid://cc6yipppcd0so" path="res://portal.gd" id="1_ef3v5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef3v5"]
+atlas = ExtResource("1_0r486")
+region = Rect2(0, 0, 64, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grrij"]
+atlas = ExtResource("1_0r486")
+region = Rect2(64, 0, 64, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r214"]
+atlas = ExtResource("1_0r486")
+region = Rect2(128, 0, 64, 84)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2pgh4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef3v5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grrij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r214")
+}],
+"loop": true,
+"name": &"Portal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grrij"]
+size = Vector2(28, 77)
+
+[node name="Portal" type="Area2D" unique_id=1096714905]
+visible = false
+script = ExtResource("1_ef3v5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1020161302]
+sprite_frames = SubResource("SpriteFrames_2pgh4")
+animation = &"Portal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504483348]
+position = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_grrij")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

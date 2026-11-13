@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://e2e26htdnhit"]
+
+[ext_resource type="Texture2D" uid="uid://bxfql238onajh" path="res://bar/Health&Stamina/Red/BorderBG.png" id="1_es4pf"]
+[ext_resource type="Texture2D" uid="uid://bo8becotnbtjs" path="res://bar/Health&Stamina/Silver/Colors.png" id="2_6pgwh"]
+[ext_resource type="Texture2D" uid="uid://fs3d6f5gmq5d" path="res://bar/Health&Stamina/Red/Border.png" id="2_51r3t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51r3t"]
+atlas = ExtResource("1_es4pf")
+region = Rect2(96.935, 228.082, 45.9, 8.152)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu05s"]
+atlas = ExtResource("2_51r3t")
+region = Rect2(95.16725, 226.14783, 49.21994, 11.857925)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2nd8"]
+atlas = ExtResource("2_6pgwh")
+region = Rect2(96.93484, 228.08163, 45.899696, 8.152496)
+
+[node name="BossUI" type="CanvasLayer" unique_id=425200399]
+
+[node name="HealthBarBos" type="TextureProgressBar" parent="." unique_id=1200128745]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -311.0
+offset_top = -1.0
+offset_bottom = 36.0
+grow_horizontal = 0
+value = 100.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_51r3t")
+texture_over = SubResource("AtlasTexture_hu05s")
+texture_progress = SubResource("AtlasTexture_u2nd8")
