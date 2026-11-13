@@ -13,11 +13,5 @@ A 2D Action Platformer game built with **Godot Engine 4**. This project implemen
 - **Evaluation Method:** System Usability Scale (SUS) & Cognitive Walkthrough.
 - **Features:** Dynamic combat system, intelligent boss/enemy AI, and custom dialogue triggers.
 
-## 🚀 How to Run
-1. Download and install [Godot Engine 4.x](https://godotengine.org/).
-2. Clone this repository:
-   ```bash
-   git clone [https://github.com/fadliDlee/the-slayer-godot.git](https://github.com/fadliDlee/the-slayer-godot.git)
-3. Open Godot Engine, click Import, and select the project.godot file from the cloned folder.
-
-4. Press F5 to run the game!   
+## 🚀 PLAY DIRECTLY IN BROWSER HERE!
+https://orthroscrzn.itch.io/the-slayer
